@@ -2,8 +2,8 @@ name: "DatDaNang.Net.VN"
 title: "DatDaNang.Net.VN"
 email: vicemanit@gmail.com
 description: "Trang thông tin phân phối trực tiếp các Dự Án Liền Kề, Biệt Thự, Nhà Phố, Chung Cư, Căn Hộ tại thành phố Đà Nẵng cũng như các tỉnh thành lân cận"
-url: "https://khuynhtroc.github.io/athena.tapdoanvimefulland.vn" 
-baseurl: "https://khuynhtroc.github.io/athena.tapdoanvimefulland.vn/"
+url: "https://athena.zynzin.com" 
+baseurl: "https://athena.zynzin.com"
 allow_search_engine: false
 # paypal: ""
 google_verify: ""
@@ -17,7 +17,7 @@ subcriber_url: ""
 markdown: "kramdown"
 highlighter: rouge
 encoding: "UTF-8"
-support_url: "https://khuynhtroc.github.io/athena.tapdoanvimefulland.vn/"
+support_url: "https://athena.zynzin.com/"
 # kramdown:
 #   input: GFM
 #   syntax_highlighter: rouge
