@@ -1,68 +1,22 @@
-<!DOCTYPE html> 
-<html dir="ltr" lang="vi-VN">
+<!DOCTYPE html>
+<html lang="vi"><meta charset="utf-8">
 <head>
+
   {% include head.html %}
 
 </head>
 
-<body class="no-transition stretched sticky-responsive-menu">
+<body>
 
-    <!-- Document Wrapper
-    ============================================= -->
-    <div id="wrapper" class="clearfix">
-  
-      {% include header.html %}
-  
-      <section id="page-title">
-  
-        <div class="container clearfix">
-          <h1>{{ page.title }}</h1>
-          <span>{{ page.description }}</span>
-        </div>
-        <div class="container clearfix">
-          <ol class="breadcrumb">
-            <li><a href="{{ site.url }}">Trang chủ</a></li>
-            <li class="active">{{ page.title }}</li>
-          </ol>
-        </div>
-  
-      </section>
-  
-  
-      <!-- Content
-      ============================================= -->
-      <section id="content">
-  
-        <div class="content-wrap">
-          <div class="container clearfix">
-            <div class="sidebar nobottommargin clearfix">
-              {% include sidebar.html %}
-            </div>
+  {% include _after_body.html %}
 
+  {% include header.html %}
+\
+  {{ content }}
 
-            <div class="postcontent col_last nobottommargin clearfix">
-              {{ content }}
-            </div>
-            
-            
-  
-          </div>
-        </div>
-        
-  
-      </section><!-- #content end -->
-  
-      {% include footer.html %}
-
-  </div><!-- #wrapper end -->
-
-
-  {% include script.html %}
+  {% include footer.html %}
 
   {% include footer_script.html %}
 
-
 </body>
 </html>
-
-

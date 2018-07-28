@@ -1,289 +1,108 @@
-<!DOCTYPE HTML>
-<html lang="vi"><meta charset="utf-8">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-	<meta http-equiv="cache-control" content="private">
-	<meta http-equiv="Content-Language" content="vi">
-	<meta name="google" content="notranslate">
-	<meta name="language" content="vi_VN">
-	<meta name="robots" content="index, follow">
-	<meta name="author" content="Athena Fulland">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name = "format-detection" content = "telephone=no">
-	<title id="hdtitle">Athena Fulland</title>
-	<meta name="description" content="Athena Fulland">
-	<meta name="keywords" content="Athena Fulland">
-	<!-- android -->
-	<meta name="mobile-web-app-capable" content="yes">
-	<meta http-equiv="cleartype" content="on">
-	<!-- iOS -->
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="apple-mobile-web-app-title" content="Athena Fulland">
-	<!-- Facebook -->
-	<meta property="og:url" content="index.html">
-	<meta property="og:title" content="Athena Fulland">
-	<meta property="og:description" content="Athena Fulland">
-	<meta property="og:type" content="website">
-	<meta property="og:site_name" content="Athena Fulland">
-	<meta property="og:image" content="catalog/view/theme/default/images/social-share.png">
-	<meta property="og:locale" content="vi_VN">
-	<!-- Google Plus -->
-	<meta itemprop="name" content="Athena Fulland">
-	<meta itemprop="description" content="Athena Fulland">
-	<meta itemprop="image" content="catalog/view/theme/default/images/social-share.png">
-	<link rel="icon" href="catalog/view/theme/default/images/favicon.png">
-	<link href="catalog/view/theme/default/css/style.css" rel="stylesheet" type="text/css">
-	<link rel="alternate" href="vi/index.html" hreflang="vi-vn">
-	<link rel="alternate" href="en/index.html" hreflang="en-gb">
-	<link href="index.html" rel="canonical">
-	<link href="catalog/view/theme/default/css/validationEngine.jquery.css" rel="stylesheet" />
-	<!--[if lt IE 9]>
-	<meta http-equiv="refresh" content="0; url=http://riverpanorama.vn/detect.html" />
-	<script type="text/javascript">
-	/* <![CDATA[ */
-	window.top.location = 'http://riverpanorama.vn/detect.html';
-	/* ]]> */
-	</script>
-	<![endif]-->
-	<script type="text/javascript" src="catalog/view/theme/default/js/jquery.js"></script>
-	
-</head>
-<body>
-	<script type="text/javascript" src="catalog/view/theme/default/js/common.js"></script>
-	<script type="text/javascript" src="catalog/view/theme/default/js/slide.js"></script>
-	<script type="text/javascript" src="catalog/view/theme/default/js/scroll.js"></script>
-	<script type="text/javascript" src="catalog/view/theme/default/js/load.js"></script>
-	<script type="text/javascript" src="catalog/view/theme/default/js/validate.js" ></script>
-	<script type="text/javascript" src="catalog/view/theme/default/js/jquery.validationEngine.js" ></script>
-	<!--LOAD-PAGE-->
-	<div class="all-pics"></div>
-	<div class="all-album"></div>
-	<div class="allvideo"></div>
-	<div class="overlay-dark"></div>
-	<!--LOAD-PAGE-->
-	<!--REGISTER-->
-	<div class="register-form">
-		<a class="close"  href="javascript:void(0);">close</a>
-		<form onsubmit="return validateregister();" action="http://angia.cognitocrm.com/subscriber_lists/12/subscribe" accept-charset="UTF-8" id="register" name="frm_register" method="post" target="_blank">
-			<input name="utf8" type="hidden" value="&#x2713;">
-			<input id="subscription_customer_source" name="subscription[customer_source]" type="hidden" value="">
-			<div class="require-col">
-				<h3>Nhận thông tin dự án</h3>
-				<div class="input-text">
-					<input id="subscription_customer_attributes_full_name" name="subscription[customer_attributes][full_name]" type="text" value="Họ và Tên (*)">
-				</div>
-				<div class="input-text">
-					<input id="subscription_customer_attributes_email" name="subscription[customer_attributes][email]" type="email"  value="Email (*)">
-				</div>
-				<div class="input-text">
-					<input id="subscription_customer_attributes_phone" name="subscription[customer_attributes][phone]" type="tel" value="Điện thoại (*)">
-				</div>
-				<div class="input-but">
-					<button class="but"  id="btn-register-submit" >gửi thông tin</button>
-				</div>
-			</div>
-		</form>
-		<span></span>
-	</div>
-	<script>
-	function validateregister(){
-		hidemsg();
-		var flagregister = true;
-		var nameregister = checkNull('subscription_customer_attributes_full_name', "Vui lòng nhập tên!","Họ và Tên (*)",'40','-270');
-		var phoneregister = checkPhone('subscription_customer_attributes_phone', "Điện thoại không hợp lệ!","Điện thoại (*)",'40','-270');
-		var emailregister = checkMail('subscription_customer_attributes_email', "Email không hợp lệ!","Email (*)",'40','-270');
-		
-		if(!nameregister || !phoneregister || !emailregister  ){
-			flagregister = false;
-			setTimeout(hideerror,5000);
-		}
-		
-		return flagregister;
-	}
-		$('#btn-register-submit').click(function(){
-		if(validateregister()==true){
-			document.getElementById('register').submit();
-			$('.register-form .close').trigger('click');
-			return false;
-			}//end if
-		$(".formError").click(function(){
-				$(this).remove();
-		});
-					return false;
-	});
-	$("#subscription_customer_attributes_phone").numeric();
-	</script>
-	<!--REGISTER-->
-	<!--HEADER-->
-	<header class="header">
-		<!--LOGO-->
-		<div class="logo vi"></div>
-		<!--LOGO-->
-		<!--HOTLINE-->
-		<div class="hotline">
-			<span class="call"></span>
-			<a href="tel:0886945555">088 694 5555</a>
-		</div>
-		<!--HOTLINE-->
-		<div class="language">
-			<form id="change_lang" enctype="multipart/form-data" method="post" action="http://riverpanorama.vn/index.php?route=common/home">
-				<ul>
-					<li class="en "><a href="javascript:void(0);" onClick="$('input[name=\'language_code\']').attr('value', 'en').submit();$('input[name=\'redirect\']').attr('value', 'en/index.html').submit();$('#change_lang').submit();return false;">en</a></li>
-				</ul>
-				<input type="hidden" value="" name="language_code" />
-				<input id="changlanguage_redirect" type="hidden" value="http://athena.tapdoanvimefulland.vn/" name="redirect" />
-			</form>
-			</div><div class="nav-click"></div>
-			<!--NAVIGATION-->
-			<div class="navigation">
-				<div class="nav">
-					<ul>
-						<li class="current" ><a class="link-load" href="index.html" data-name="home-page" data-title="Athena Fulland" data-description="Athena Fulland" data-keyword="Athena Fulland">Trang chủ</a></li>
-						<li  ><a class="link-load" href="vi/gioi-thieu.html" data-name="about-page" data-title="Athena Fulland" data-description="Athena Fulland" data-keyword="Athena Fulland">Giới thiệu</a></li>
-						<li  ><a class="link-load" href="vi/vi-tri.html" data-name="location-page" data-title="Athena Fulland" data-description="Athena Fulland" data-keyword="Athena Fulland">Vị trí</a></li>
-						<li  ><a class="link-load" href="vi/tien-ich.html" data-name="facilities-page" data-title="Athena Fulland" data-description="Athena Fulland" data-keyword="Athena Fulland">Tiện ích</a></li>
-						<li  ><a class="link-load" href="vi/can-ho.html" data-name="apartment-page" data-title="Athena Fulland" data-description="Athena Fulland" data-keyword="Athena Fulland">Thông tin căn hộ</a></li>
-						<li  ><a class="link-load" href="vi/tien-do.html" data-name="progress-page" data-title="Athena Fulland" data-description="Athena Fulland" data-keyword="Athena Fulland">Tiến độ</a></li>
-						<li  ><a class="link-load" href="vi/thu-vien.html" data-name="library-page" data-title="Athena Fulland" data-description="Athena Fulland" data-keyword="Athena Fulland">Thư viện</a></li>
-						<li  ><a class="link-load" href="vi/tin-tuc.html" data-name="media-page" data-title="Athena Fulland" data-description="Athena Fulland" data-keyword="Athena Fulland">Tin tức</a></li>
-						<li  ><a class="link-load" href="vi/lien-he.html" data-name="contact-page" data-title="Athena Fulland" data-description="Athena Fulland" data-keyword="Athena Fulland">Liên hệ</a></li>
-					</ul>
-				</div>
-				<span></span>
-			</div>
-			<!--NAVIGATION-->
-		</header>
-		<!--HEADER--><!--CONTAINER-->
-<section class="container"  id="location-page">
-<div class="title-page"><h1>Vị trí</h1></div>
-<div class="box-slider">
-<!--LEFT CONTENT-->
-<div class="box-left">
-<!--LOCATION-->
-<div class="group-left"   data-name="location">
-<div class="box-cover">
-<div class="map-mobile">
-<div class="compass"></div>
-<img src="../pictures/catalog/location/map_m.svg" alt="VỊ TRÍ TRUNG TÂM">
-</div></div>
-<div class="text-intro">
-<h2>VỊ TRÍ TRUNG TÂM</h2>
-<div class="box-text">
-<p>River Panorama sở hữu vị thế <strong>“vàng”</strong> ngay trung tâm Nam Sài Gòn, khu vực Đào Trí – Hoàng Quốc Việt, nơi được dự đoán là cung đường du lịch đẹp nhất Sài Gòn trong tương lai.</p>
+---
+layout: page
+title: "Vị trí dự án Athena Fulland"
+h1-title: "Vị trí dự án Athena Fulland"
+meta-title: "Vị trí dự án Athena Fulland"
+description: ""
+meta-description: ""
+meta-keywords: ""
+permalink: "/vi/vi-tri-du-an/"
+image: ""
+video: ""
+sort_order: 60
+price:
+rating: 97
+review_count: 124
+has_review: true
+special_price:
+ee_zoom-in: 200
+published: true
+sitemap: true
+---
 
-<p>River Panorama chỉ cách 1 bước chân để kết nối đến Phú Mỹ Hưng, trung tâm quận 1 và khu đô thị mới Thủ Thiêm.</p></div>
-</div>
-</div>
-<!--LOCATION-->
-</div>
-<!--LEFT CONTENT-->
-<!--RIGHT CONTENT-->
-<div class="box-right">
-<!--LOCATION-->
-<div class="group-right"  data-name="location">
-<div class="box-cover-right">
-<div class="viewer">
-<div class="compass"></div>
-<div class="panzoom">
-<div class="map-img">
-<div class="apartment-pointer">
-<div class="pointer"></div>
-<a class="go-apartment" href="can-ho.html" data-target="dot-01"><h3>Xem Căn hộ</h3></a>
-</div>
-<div class="bot-dot">
-<a class="zoom-box  pot-02" href="javascript:void(0);" data-target="dot-02" ><span class="circle"></span></a>
-<a class="zoom-box  pot-03" href="javascript:void(0);" data-target="dot-03" ><span class="circle"></span></a>
-<a class="zoom-box  pot-04" href="javascript:void(0);" data-target="dot-04" ><span class="circle"></span></a>
-<a class="zoom-box  pot-05" href="javascript:void(0);" data-target="dot-05" ><span class="circle"></span></a>
-<a class="zoom-box  pot-06" href="javascript:void(0);" data-target="dot-06" ><span class="circle"></span></a>
-</div>
-<img src="../pictures/catalog/location/map.svg" alt="VỊ TRÍ TRUNG TÂM">
-</div>
-</div>
-<div class="buttons">
-<div class="mouse"></div>
-<button class="pic-zoom-in">Zoom In</button>
-<button class="pic-zoom-out">Zoom Out</button>
-</div>
-</div>
-</div>
-</div>
-<!--LOCATION-->
-</div>
-<!--RIGHT CONTENT-->
-<div class="bot-circle">
-<div class="show-box" data-box="dot-01">
-<h3>River Panorama</h3>
-<img src="../pictures/catalog/location/s1.jpg" alt="River Panorama">
-</div>
-<div class="show-box" data-box="dot-02">
-<h3><small>Bệnh Viện</small>Pháp Việt</h3>
-<img src="../pictures/catalog/location/s3.jpg" alt="Pháp Việt">
-</div>
-<div class="show-box" data-box="dot-03">
-<h3><small>Trường ĐH</small>RMIT</h3>
-<img src="../pictures/catalog/location/s2.jpg" alt="RMIT">
-</div>
-<div class="show-box" data-box="dot-04">
-<h3>Hồ Bán Nguyệt</h3>
-<img src="../pictures/catalog/location/s6.jpg" alt="Hồ Bán Nguyệt">
-</div>
-<div class="show-box" data-box="dot-05">
-<h3><small>TTTM</small>Cresent Mall</h3>
-<img src="../pictures/catalog/location/s5.jpg" alt="Cresent Mall">
-</div>
-<div class="show-box" data-box="dot-06">
-<h3><small>TT Triển Lãm</small>SECC</h3>
-<img src="../pictures/catalog/location/s9.jpg" alt="SECC">
-</div>
-</div>
-</div>
-</section>
 <!--CONTAINER-->
-<!--FOOTER-->
-			<footer class="footer">
-				<!--INVESTOR-->
-				<div class="investor desktop">
-					<ul>
-						<li><a class="logo-angia vi" href="http://angia.com.vn/tin-tuc-va-su-kien/tin-du-an/su-kien-dac-biet-mo-ban-giai-doan-2-du-an-river-panorama.html" target="_blank"></a></li>
-						<li><a class="logo-creed vi" href="javascript:void(0);" target="_blank"></a></li>
-					</ul>
+<section class="container"  id="location-page">
+	<div class="title-page"><h1>Vị trí</h1></div>
+	<div class="box-slider">
+		<!--LEFT CONTENT-->
+		<div class="box-left">
+			<!--LOCATION-->
+			<div class="group-left"   data-name="location">
+				<div class="box-cover">
+					<div class="map-mobile">
+						<div class="compass"></div>
+						<img src="../pictures/catalog/location/map_m.svg" alt="VỊ TRÍ TRUNG TÂM">
+					</div></div>
+					<div class="text-intro">
+						<h2>VỊ TRÍ TRUNG TÂM</h2>
+						<div class="box-text">
+							<p>River Panorama sở hữu vị thế <strong>“vàng”</strong> ngay trung tâm Nam Sài Gòn, khu vực Đào Trí – Hoàng Quốc Việt, nơi được dự đoán là cung đường du lịch đẹp nhất Sài Gòn trong tương lai.</p>
+							<p>River Panorama chỉ cách 1 bước chân để kết nối đến Phú Mỹ Hưng, trung tâm quận 1 và khu đô thị mới Thủ Thiêm.</p></div>
+						</div>
+					</div>
+					<!--LOCATION-->
 				</div>
-				<!--INVESTOR-->
-				<div class="bottom-link">
-					<a class="go-page" href="vi/tien-ich.html">Tiện ích<span></span></a>
-					<a class="go-page" href="vi/can-ho.html">Căn hộ<span></span></a>
-					<div class="subscribe-icon"><a href="javascript:void(0);">Nhận thông tin dự án</a></div>
+				<!--LEFT CONTENT-->
+				<!--RIGHT CONTENT-->
+				<div class="box-right">
+					<!--LOCATION-->
+					<div class="group-right"  data-name="location">
+						<div class="box-cover-right">
+							<div class="viewer">
+								<div class="compass"></div>
+								<div class="panzoom">
+									<div class="map-img">
+										<div class="apartment-pointer">
+											<div class="pointer"></div>
+											<a class="go-apartment" href="can-ho.html" data-target="dot-01"><h3>Xem Căn hộ</h3></a>
+										</div>
+										<div class="bot-dot">
+											<a class="zoom-box  pot-02" href="javascript:void(0);" data-target="dot-02" ><span class="circle"></span></a>
+											<a class="zoom-box  pot-03" href="javascript:void(0);" data-target="dot-03" ><span class="circle"></span></a>
+											<a class="zoom-box  pot-04" href="javascript:void(0);" data-target="dot-04" ><span class="circle"></span></a>
+											<a class="zoom-box  pot-05" href="javascript:void(0);" data-target="dot-05" ><span class="circle"></span></a>
+											<a class="zoom-box  pot-06" href="javascript:void(0);" data-target="dot-06" ><span class="circle"></span></a>
+										</div>
+										<img src="../pictures/catalog/location/map.svg" alt="VỊ TRÍ TRUNG TÂM">
+									</div>
+								</div>
+								<div class="buttons">
+									<div class="mouse"></div>
+									<button class="pic-zoom-in">Zoom In</button>
+									<button class="pic-zoom-out">Zoom Out</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--LOCATION-->
 				</div>
-				<!--SOCIAL-->
-				<div class="social">
-					<ul>
-						<li><a class="facebook" href="#" target="_blank"></a></li>
-						<li><a class="youtube" href="#"  target="_blank"></a></li>
-						<li><a class="google" href="#"  target="_blank"></a></li>
-					</ul>
+				<!--RIGHT CONTENT-->
+				<div class="bot-circle">
+					<div class="show-box" data-box="dot-01">
+						<h3>River Panorama</h3>
+						<img src="../pictures/catalog/location/s1.jpg" alt="River Panorama">
+					</div>
+					<div class="show-box" data-box="dot-02">
+						<h3><small>Bệnh Viện</small>Pháp Việt</h3>
+						<img src="../pictures/catalog/location/s3.jpg" alt="Pháp Việt">
+					</div>
+					<div class="show-box" data-box="dot-03">
+						<h3><small>Trường ĐH</small>RMIT</h3>
+						<img src="../pictures/catalog/location/s2.jpg" alt="RMIT">
+					</div>
+					<div class="show-box" data-box="dot-04">
+						<h3>Hồ Bán Nguyệt</h3>
+						<img src="../pictures/catalog/location/s6.jpg" alt="Hồ Bán Nguyệt">
+					</div>
+					<div class="show-box" data-box="dot-05">
+						<h3><small>TTTM</small>Cresent Mall</h3>
+						<img src="../pictures/catalog/location/s5.jpg" alt="Cresent Mall">
+					</div>
+					<div class="show-box" data-box="dot-06">
+						<h3><small>TT Triển Lãm</small>SECC</h3>
+						<img src="../pictures/catalog/location/s9.jpg" alt="SECC">
+					</div>
 				</div>
-				<!--SOCIAL-->
-				<!--COPYRIGHT-->
-				<div class="bottom-text">
-					<div class="copyright">2018 <strong>Athena Fulland</strong>.  All Rights Reserved.</div>
-				</div>
-				<!--COPYRIGHT-->
-			</footer>
-			<!--FOOTER-->
-			<div class="overlay-menu"></div>
-			<div class="whell"></div>
-			<div class="go-top"></div>
-			<div class="scroll-down"></div>
-			<div class="mask"></div>
-			<div class="httpserver class-hidden">http://athena.tapdoanvimefulland.vn/</div>
-			<div class="httptemplate class-hidden">http://athena.tapdoanvimefulland.vn/catalog/view/theme/</div>
-			<div class="text-close class-hidden">close</div>
-			<script type="text/javascript" src="catalog/view/theme/default/js/tween.js"></script>
-			<script type="text/javascript" src="catalog/view/theme/default/js/btq.js"></script>
-			<script src="//cdn.cognitocrm.com/js/customer_source.min.js"></script>
-			
-		</body>
-	</html>
+			</div>
+		</section>
+		<!--CONTAINER-->
