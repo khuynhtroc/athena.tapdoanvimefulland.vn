@@ -1,0 +1,74 @@
+name: "Athena Fulland"
+title: "Athena Fulland"
+email: khuynhtroc@gmail.com
+description: ""
+url: "http://athena.tapdoanvimefulland.vn" 
+baseurl: "http://athena.tapdoanvimefulland.vn"
+allow_search_engine: true
+# paypal: ""
+google_verify: ""
+bing_verify: 
+google_analytics: "UA-77813057-22"
+google_tag_manager_id: ""
+google_plus: 
+subcriber_url: ""
+
+# Build Settings
+markdown: "kramdown"
+highlighter: rouge
+encoding: "UTF-8"
+support_url: "http://athena.tapdoanvimefulland.vn/lien-he/"
+# kramdown:
+#   input: GFM
+#   syntax_highlighter: rouge
+#   auto_ids: true
+#   footnote_nr: 1
+#   entity_output: as_char
+#   toc_levels: 1..6
+#   use_coderay: false
+  # coderay:
+  #   coderay_line_numbers: nil
+  #   coderay_line_numbers_start: 1
+  #   coderay_tab_width: 4
+  #   coderay_bold_every: 10
+  #   coderay_css: class
+
+# http://jekyllrb.com/docs/permalinks/
+# /:title/ /:title.html
+permalink:   "/:categories/:title/"
+
+# Amount of post to show on home page
+paginate: 5
+paginate_path: "/tin-tuc/page:num/"
+
+future: true
+
+gems:
+  - jekyll-redirect-from
+  - jekyll-paginate
+  # - jekyll-related-posts
+  # http://jekyllrb.com/docs/templates/#gist
+  # - jekyll-gist
+  # - jekyll-less
+include: [".htaccess", "LICENSE.txt", "*.woff", "*.ttf", "*.json"]
+exclude: ["_site", lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "vendor", "shell", ".keep", "note.xml", "templates", "private"]
+collections:
+  pages:
+    output: true
+  products:
+    output: true
+  features:
+    output: true
+  plugins:
+    output: true
+  authors:
+    output: true
+  
+
+
+related:
+  max_count: 5
+  min_score: 0.1
+  accuracy: 0.75
+
+

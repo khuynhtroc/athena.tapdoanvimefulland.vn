@@ -1,0 +1,65 @@
+	<script type="text/javascript" src="{{ site.url }}/catalog/view/theme/default/js/common.js"></script>
+	<script type="text/javascript" src="{{ site.url }}/catalog/view/theme/default/js/slide.js"></script>
+	<script type="text/javascript" src="{{ site.url }}/catalog/view/theme/default/js/scroll.js"></script>
+	<script type="text/javascript" src="{{ site.url }}/catalog/view/theme/default/js/load.js"></script>
+	<script type="text/javascript" src="{{ site.url }}/catalog/view/theme/default/js/validate.js" ></script>
+	<script type="text/javascript" src="{{ site.url }}/catalog/view/theme/default/js/jquery.validationEngine.js" ></script>
+	<!--LOAD-PAGE-->
+	<div class="all-pics"></div>
+	<div class="all-album"></div>
+	<div class="allvideo"></div>
+	<div class="overlay-dark"></div>
+	<!--LOAD-PAGE-->
+	<!--REGISTER-->
+	<div class="register-form">
+		<a class="close"  href="javascript:void(0);">close</a>
+		<form onsubmit="return validateregister();" action="http://angia.cognitocrm.com/subscriber_lists/12/subscribe" accept-charset="UTF-8" id="register" name="frm_register" method="post" target="_blank">
+			<input name="utf8" type="hidden" value="&#x2713;">
+			<input id="subscription_customer_source" name="subscription[customer_source]" type="hidden" value="">
+			<div class="require-col">
+				<h3>Nhận thông tin dự án</h3>
+				<div class="input-text">
+					<input id="subscription_customer_attributes_full_name" name="subscription[customer_attributes][full_name]" type="text" value="Họ và Tên (*)">
+				</div>
+				<div class="input-text">
+					<input id="subscription_customer_attributes_email" name="subscription[customer_attributes][email]" type="email"  value="Email (*)">
+				</div>
+				<div class="input-text">
+					<input id="subscription_customer_attributes_phone" name="subscription[customer_attributes][phone]" type="tel" value="Điện thoại (*)">
+				</div>
+				<div class="input-but">
+					<button class="but"  id="btn-register-submit" >gửi thông tin</button>
+				</div>
+			</div>
+		</form>
+		<span></span>
+	</div>
+	<script>
+	function validateregister(){
+		hidemsg();
+		var flagregister = true;
+		var nameregister = checkNull('subscription_customer_attributes_full_name', "Vui lòng nhập tên!","Họ và Tên (*)",'40','-270');
+		var phoneregister = checkPhone('subscription_customer_attributes_phone', "Điện thoại không hợp lệ!","Điện thoại (*)",'40','-270');
+		var emailregister = checkMail('subscription_customer_attributes_email', "Email không hợp lệ!","Email (*)",'40','-270');
+		
+		if(!nameregister || !phoneregister || !emailregister  ){
+			flagregister = false;
+			setTimeout(hideerror,5000);
+		}
+		
+		return flagregister;
+	}
+		$('#btn-register-submit').click(function(){
+		if(validateregister()==true){
+			document.getElementById('register').submit();
+			$('.register-form .close').trigger('click');
+			return false;
+			}//end if
+		$(".formError").click(function(){
+				$(this).remove();
+		});
+					return false;
+	});
+	$("#subscription_customer_attributes_phone").numeric();
+	</script>
+	<!--REGISTER-->
