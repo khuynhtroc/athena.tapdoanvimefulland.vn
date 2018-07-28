@@ -10,7 +10,7 @@
 			</div>
 			<!--HOTLINE-->
 			<div class="language">
-				<form id="change_lang" enctype="multipart/form-data" method="post" action="http://riverpanorama.vn/index.php?route=common/home">
+				<form id="change_lang" enctype="multipart/form-data" method="post" action="{{ site.url }}/index.php?route=common/home">
 					<ul>
 						<li class="en "><a href="javascript:void(0);" onClick="$('input[name=\'language_code\']').attr('value', 'en').submit();$('input[name=\'redirect\']').attr('value', '{{ site.url }}/en/').submit();$('#change_lang').submit();return false;">en</a></li>
 					</ul>
