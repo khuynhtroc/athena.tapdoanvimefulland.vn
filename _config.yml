@@ -8,7 +8,7 @@ allow_search_engine: true
 # paypal: ""
 google_verify: ""
 bing_verify: 
-google_analytics: "UA-77813057-22"
+google_analytics: "UA-122301114-3"
 google_tag_manager_id: ""
 google_plus: 
 subcriber_url: ""
