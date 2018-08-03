@@ -366,25 +366,25 @@ function BoxSlide() {
         !1)
     }),
     $(".box-nav li:first-child").addClass("active"),
-    // $(".container").on("mousewheel", function(e) {
-    //     if ($(window).width() > 1100 && !$("body").hasClass("fullvideo")) {
-    //         var o;
-    //         n === !1 && (o = function() {
-    //             var t = Math.max(-1, Math.min(1, e.wheelDelta || -e.deltaY || -e.detail));
-    //             return t
-    //         }()),
-    //         clearTimeout($.data(this, "timer")),
-    //         $.data(this, "timer", setTimeout(function() {
-    //             n = !1
-    //         }, 1e3)),
-    //         clearInterval(s),
-    //         s = null,
-    //         null != $(".group-left")[l] && 1 === parseInt(o) ? (l >= i - 1 ? l = 0 : l++,
-    //         t()) : null != $(".group-left")[l] && -1 === parseInt(o) && (0 >= l ? l = i - 1 : l--,
-    //         a())
-    //     }
-    //     e.preventDefault()
-    // })
+    $(".container").on("mousewheel", function(e) {
+        if ($(window).width() > 1100 && !$("body").hasClass("fullvideo")) {
+            var o;
+            n === !1 && (o = function() {
+                var t = Math.max(-1, Math.min(1, e.wheelDelta || -e.deltaY || -e.detail));
+                return t
+            }()),
+            clearTimeout($.data(this, "timer")),
+            $.data(this, "timer", setTimeout(function() {
+                n = !1
+            }, 1e3)),
+            clearInterval(s),
+            s = null,
+            null != $(".group-left")[l] && 1 === parseInt(o) ? (l >= i - 1 ? l = 0 : l++,
+            t()) : null != $(".group-left")[l] && -1 === parseInt(o) && (0 >= l ? l = i - 1 : l--,
+            a())
+        }
+        e.preventDefault()
+    })
 }
 function SlidePicture() {
     if ($("#home-page").length && $(window).width() > 1100 && ($(".box-left").addClass("visible"),
