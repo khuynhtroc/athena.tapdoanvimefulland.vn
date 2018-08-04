@@ -51,7 +51,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="apple-mobile-web-app-title" content="Athena Fulland">
 	<!-- Facebook -->
-	<meta property="og:url" content="index.html">
+	<meta property="og:url" content="{{ site.url }}{{ page.url }}">
 	<meta property="og:title" content="Athena Fulland - Khu Đô Thị Triệu Đô">
 	<meta property="og:description" content="Athena Fulland - Khu Đô Thị Triệu Đô">
 	<meta property="og:type" content="website">
@@ -75,4 +75,13 @@
 	/* ]]> */
 	</script>
 	<![endif]-->
-	<script type="text/javascript" src="{{ site.url }}/catalog/view/theme/default/js/jquery.js"></script>
+
+	<script type="application/ld+json">{"@context": "http://schema.org","@type": "WebSite","headline": "BELLA VILLA","image": "http://bellavilla.vn/catalog/view/theme/default/images/social-share.png"}</script>
+	<script type='application/ld+json'>{"@context":"http://schema.org","@type":"Organization","url":"http://bellavilla.vn/","sameAs":["https://www.facebook.com/trananhgroup.bds","https://plus.google.com/u/1/?hl=vi"],"name":"BELLA VILLA","logo":"http://bellavilla.vn/catalog/view/theme/default/images/social-share.png"}</script>
+	<script type="text/javascript" src="catalog/view/theme/default/js/jquery.js"></script>
+	<script type="text/javascript" src="catalog/view/theme/default/js/common.js"></script>
+	<script type="text/javascript" src="catalog/view/theme/default/js/slide.js"></script>
+	<script type="text/javascript" src="catalog/view/theme/default/js/scroll.js"></script>
+	<script type="text/javascript" src="catalog/view/theme/default/js/load.js"></script>
+	<script type="text/javascript" src="catalog/view/theme/default/js/validate.js"></script>
+	<script type="text/javascript" src="catalog/view/theme/default/js/jquery.validationEngine.js"></script>
