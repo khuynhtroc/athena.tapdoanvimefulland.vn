@@ -1,70 +1,93 @@
-	<script type="text/javascript" src="{{ site.url }}/catalog/view/theme/default/js/common.js"></script>
-	<script type="text/javascript" src="{{ site.url }}/catalog/view/theme/default/js/slide.js"></script>
-	<script type="text/javascript" src="{{ site.url }}/catalog/view/theme/default/js/scroll.js"></script>
-	<script type="text/javascript" src="{{ site.url }}/catalog/view/theme/default/js/load.js"></script>
-	<script type="text/javascript" src="{{ site.url }}/catalog/view/theme/default/js/validate.js" ></script>
-	<script type="text/javascript" src="{{ site.url }}/catalog/view/theme/default/js/jquery.validationEngine.js" ></script>
-	<!--LOAD-PAGE0-->
-	<div class="all-pics"></div>
-	<div class="all-album"></div>
-	<div class="allvideo"></div>
-	<div class="overlay-dark"></div>
-	<!--LOAD-PAGE-->
+	<div id="contact-loader"></div>
 	<!--REGISTER-->
 	<div class="register-form">
-		<a class="close"  href="javascript:void(0);">Đóng</a>
-		<form onsubmit="return validateregister();" action="https://tapdoanvimefulland.us18.list-manage.com/subscribe/post?u=eb2c82ff1a245d4ee5791ddc7&amp;id=fa18c0c417" accept-charset="UTF-8" id="register" name="frm_register" method="post" target="_blank">
-			<input name="utf8" type="hidden" value="&#x2713;">
-			<input id="subscription_customer_source" name="subscription[customer_source]" type="hidden" value="">
+		<span class="flower"></span>
+		<div class="close-form"></div>
+		<form onsubmit="return validateregister();" id="frm_register" name="frm_register" method="post">
 			<div class="require-col">
-				<h3>Nhận thông tin dự án</h3>
+				<h3>Đăng ký nhận thông tin</h3>
 				<div class="input-text">
-					<input id="subscription_customer_attributes_full_name" name="subscription[customer_attributes][full_name]" type="text" value="Họ và Tên (*)">
+					<input id="nameregister" name="nameregister" value="Họ và Tên (*)" type="text">
 				</div>
 				<div class="input-text">
-					<input id="subscription_customer_attributes_email" name="subscription[customer_attributes][email]" type="email"  value="Email (*)">
+					<input id="emailregister" name="emailregister" value="Email (*)" type="text">
 				</div>
 				<div class="input-text">
-					<input id="subscription_customer_attributes_phone" name="subscription[customer_attributes][phone]" type="tel" value="Điện thoại (*)">
+					<input id="phoneregister" name="phoneregister" value="Điện thoại (*)" type="text">
+				</div>
+				<div class="input-text">
+					<input id="addressregister" name="addressregister" value="Địa chỉ" type="text">
+				</div>
+				<div class="input-area">
+					<textarea name="commentregister" id="commentregister">Nội dung (*)</textarea>
 				</div>
 				<div class="input-but">
-					<button class="but"  id="btn-register-submit" >gửi thông tin</button>
+					<div class="button">
+						<input id="btn-register-submit" value="GỬI" type="button">
+					</div>
 				</div>
 			</div>
 		</form>
-		<span></span>
 	</div>
-	<script>
+	<!--REGISTER-->
+	<script type="text/javascript">
 	function validateregister(){
 		hidemsg();
 		var flagregister = true;
-		var nameregister = checkNull('subscription_customer_attributes_full_name', "Vui lòng nhập tên!","Họ và Tên (*)",'40','-270');
-		var phoneregister = checkPhone('subscription_customer_attributes_phone', "Điện thoại không hợp lệ!","Điện thoại (*)",'40','-270');
-		var emailregister = checkMail('subscription_customer_attributes_email', "Email không hợp lệ!","Email (*)",'40','-270');
-		
-		if(!nameregister || !phoneregister || !emailregister  ){
+		var nameregister = checkNull('nameregister', "Vui lòng nhập tên!","Họ và Tên (*)",'40','-270');
+		var commentregister = checkNull('commentregister', "Vui lòng nhập nội dung!","Nội dung (*)",'40','-270');
+		var phoneregister = checkNull('phoneregister', "Điện thoại không hợp lệ!","Điện thoại (*)",'40','-270');
+			var emailregister = checkMail('emailregister', "Email không hợp lệ!","Email (*)",'40','-270');
+		if(!nameregister || !commentregister || !phoneregister || !emailregister  ){
 			flagregister = false;
 			setTimeout(hideerror,5000);
 		}
-		
 		return flagregister;
 	}
 		$('#btn-register-submit').click(function(){
-		if(validateregister()==true){
-			document.getElementById('register').submit();
-			$('.register-form .close').trigger('click');
-			return false;
-			}//end if
-		$(".formError").click(function(){
-				$(this).remove();
+			hideerror();
+			hidemsg();
+			if(validateregister()==true){
+				//$("#contact-loader").show();
+				$('.loadicon').show();
+				$('.loadicon').addClass('loader');
+				DrawLoad();
+				var datapost = $('#frm_register').serialize();
+				
+				$.ajax({
+				type: "POST",
+				url: "http://bellavilla.vn/send-register.html",
+				data: datapost,
+				success: function(success) {
+					//$("#contact-loader").hide();
+					$('.loadicon').hide();
+					$('.loadicon').removeClass('loader');
+					$('.loadicon').removeClass('show');
+					$('.contact-success').remove();
+					if(success=='1'){
+						document.getElementById('frm_register').reset();
+						$('.close-form').trigger('click');
+													$('#contact-loader').after("<div  class='contact-success color-blue'>Thông tin đăng ký của Bạn được gửi hoàn tất ! Cảm ơn Bạn !</div>");
+					}else{
+						$('#contact-loader').after("<div  class='contact-success color-red'>Thông tin đăng ký của bạn không gửi được, vui lòng kiểm tra lại!</div>");
+					}
+					$('html, body').animate({scrollTop:0}, 'slow');
+					setTimeout(hidemsg,5000);
+				}
+				});  //end ajax
+				return false;
+				}//end if
+			$(".formError").click(function(){
+					$(this).remove();
+			});
+						return false;
 		});
-					return false;
+		$("#phoneregister").numeric();
+		$('#frm_register').keydown(function(e) {
+	if(!$("textarea").is(":focus")){
+			if (e.keyCode == 13) {
+				$('#btn-register-submit').trigger('click');
+	}
+			}
 	});
-	$("#subscription_customer_attributes_phone").numeric();
 	</script>
-	<!--REGISTER-->
-
-	<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5H8M6MX"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
