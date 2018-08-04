@@ -1,4 +1,4 @@
-﻿---
+---
 layout: home
 title: "Athena Fulland - Khu Đô Thị Triệu Đô"
 meta-title: "Athena Fulland - Khu Đô Thị Triệu Đô"
@@ -9,122 +9,194 @@ redirect_from:
     - /index.php/
 ---
 
-<!--CONTAINER-->
-	<div class="container">
-		<!--DESKTOP INTRO-->
-		<div class="slider-home" data-time="5000">
-			<div class="slide-bg">
-				<div class="pagination"></div>
-				<div class="item-wrapper">
-					<div class="item-container">
-						<div class="bg-home" style="background-image:url(images/banner-1.jpg)"></div>
-						<div class="left-content">
-							<span class="leaf"></span>
-						<h2>CƠ HỘI ĐẦU TƯ SINH LỜI VƯỢT TRỘI</h2><h3>ATHENA ĐẠI KIM - XÂY DỰNG TỔ ẤM BỀN VỮNG TƯƠNG LAI</h3></div>
+		<!--CONTAINER-->
+		<section class="container"  id="home-page">
+			<div class="title-page"><h1>Athena Fulland</h1></div>
+			<div class="box-nav"></div>
+			<div class="box-slider">
+				<!--LEFT CONTENT-->
+				<div class="box-left">
+					<!--INTRO-->
+					<div class="group-left" data-name="intro-home">
+						<div class="box-cover" ></div>
+						<div class="center-content">
+							<div class="logo-center"></div>
+							<span class="line"></span>
+							<h2 class="slogan">Athena Fulland - Khu đô thị phức hợp triệu đô</h2>
+						</div>
+						<!--VIDEO-->
+						<div class="box-video-center">
+							<div class="video-cover" id="videocontainer" data-fullscreen="false">
+								<a class="player-vid" id="playervid"  href="javascript:void(0);"></a>
+								<div class="pic-video" style="background-image:url({{ site.url }}/pictures/canhomau/can-ho-mau-athena-fulland-1.jpg)"></div>
+								<video id="video-full" class="video-full"  preload="auto" loop  muted  controls>
+									<source src="download/belleville-ha-noi.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
+								</video>
+								<!--VIDEO CONTROL-->
+								<div id="videocontrols" class="controls" data-state="hidden">
+									<button id="stop" type="button" data-state="stop"></button>
+									<button id="playpause" type="button" data-state="play"></button>
+									<div class="progress"><progress id="progress" value="0" min="0"><span id="progressbar"></span></progress></div>
+									<button id="mute" type="button" data-state="mute"></button>
+									<button id="fullscreen" type="button" data-state="go-fullscreen"></button>
+								</div>
+								<!--VIDEO CONTROL-->
+							</div>
+						</div>
+						<!--VIDEO-->
 					</div>
-					<div class="item-container">
-						<div class="bg-home" style="background-image:url(images/banner-2.jpg)"></div>
-						<div class="left-content">
-							<span class="leaf"></span>
-						<h2>NHẬN ĐẶT CHỖ ƯU TIÊN</h2><h3>GIÁ GỐC CHỦ ĐẦU TƯ</h3></div>
-					</div>
-					<div class="item-container">
-						<div class="bg-home" style="background-image:url(images/banner-3.jpg)"></div>
-						<div class="left-content">
-							<span class="leaf"></span>
-						<h2>THIÊN ĐƯỜNG SỐNG AN NHIÊN</h2><h3>GIỮA LÒNG THỦ ĐÔ NÁO NHIỆT</h3></div>
-					</div>
-					<div class="item-container">
-						<div class="bg-home" style="background-image:url(images/banner-4.jpg)"></div>
-						<div class="left-content">
-							<span class="leaf"></span>
-						<h2>KHẲNG ĐỊNH ĐẲNG CẤP</h2><h3>NÂNG TẦM GIÁ TRỊ</h3></div>
-					</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--DESKTOP INTRO-->
-		<!--CONTENT-MOBILE-->
-		<section id="location">
-			<div class="location-mobile">
-				<h3>Vị trí tiềm năng</h3>
-				<img src="pictures/catalog/location/map_s.jpeg" alt="Vị trí tiềm năng">
-				<a class="zoom-mobile" href="javascript:void(0);" data-src="http://bellavilla.vn/pictures/catalog/location/map_l.jpg">Phóng To</a>
-			</div>
-		</section>
-		<section id="facilities">
-			<div class="mobile-intro">
-				<div class="text-intro">
-					<h3>Biệt thự - Nhà phố Bella Villa</h3>
-					<p><span style="font-weight: bold;"><a href="index.html">Bella Villa</a></span> được lấy ý tưởng từ viên ngọc kiêu sa, quý tộc, như chính đẳng cấp sang trọng khu biệt thự cao cấp đem lại cho người sở hữu. Mang vóc dáng tổng thể hệt như chiếc vỏ sò khum mình ôm trọn những tinh túy đất trời tụ hội, tạo nên viên ngọc sáng mang tên<span style="font-weight: bold;"><a href="index.html"> Bella Villa</a></span>, tôn tạo giá trị cuộc sống, phô diễn sự quyền quý của tầng lớp quý tộc thương gia.</p><p><strong>" <a href="index.html">Bella Villa</a> - nơi của những tinh hoa hội tụ,<br> nơi của những giá trị trường tồn với thời gian "</strong></p></div>
-					<img src="pictures/catalog/background/full-mobile.jpeg" alt="Biệt thự - Nhà phố Bella Villa">
-					<a class="go-page" href="gioi-thieu.html">Xem Thêm</a></div>
-				</section>
-				<!--CONTENT-MOBILE-->
-				<!--NEWS-->
-				<div class="hot-news">
+					<!--INTRO-->
 					<!--NEWS-->
-					<div class="news-home">
-						<h2>tin mới</h2>
-						<div class="news-slide">
-							<div class="box-news">
-								<div class="pic">
-									<img src="pictures/catalog/tin-tuc/23-04-18/h1.jpeg" alt="Giới nhà giàu “săn lùng” biệt thự gây sốt phía Tây Bắc Sài Gòn">
-								</div>
-								<h3>Giới nhà giàu “săn lùng” biệt thự gây sốt phía Tây Bắc Sài Gòn</h3>
-								<a class="go-news" href="tin-tuc/tin-du-an/gioi-nha-giau-san-lung-biet-thu-gay-sot-phia-tay-bac-sai-gon.html">xem</a>
+					<!--div class="group-left"  data-name="news-home">
+						<div class="box-cover"  style="background-image:url({{ site.url }}/pictures/catalog/background/banner-athena-fulland-new-1.jpg);"></div>
+					</div>
+					<!--NEWS-->
+					<!--Cộng đồng-->
+					<div class="group-left"  data-name="location-home">
+						<div class="box-cover" style="background-image:url({{ site.url }}/pictures/catalog/background/bg2.jpg)"><!--img src="{{ site.url }}/pictures/catalog/background/athena-fulland-phoi-canh-biet-thu-don-lap.jpg" alt="CỘNG ĐỒNG DÂN CƯ ĐẲNG CẤP"--></div>
+						<div class="text-intro">
+							<h2>CỘNG ĐỒNG DÂN CƯ ĐẲNG CẤP</h2>
+							<div class="box-text">
+								<p>Đẳng cấp là đặc quyền lựa chọn và thụ hưởng những giá trị tinh hoa bậc nhất trong mọi lĩnh vực của cuộc sống. Đẳng cấp thực sự không dành cho số đông.<br><br>
+								Đẳng cấp là đích đến, là sự ghi nhận, là dấu ấn cho sự thành công của những con người đã đạt tới đỉnh cao của sự nghiệp, cuộc sống và hạnh phúc.<br><br>
+								Athena Fulland là khu đô thị đáng sống bậc nhất giữa lòng Hà Nội, một tuyệt phẩm giao hưởng mang giai điệu sinh thái đỉnh cao, nơi khẳng định đẳng cấp sống cho riêng quý khách!
+								</p>
 							</div>
-							<div class="box-news">
-								<div class="pic">
-									<img src="pictures/catalog/tin-tuc/12-04-18/h1.jpeg" alt="Bella Villa - Đỉnh cao của cuộc sống thượng lưu">
-								</div>
-								<h3>Bella Villa - Đỉnh cao của cuộc sống thượng lưu</h3>
-								<a class="go-news" href="tin-tuc/tin-du-an/bella-villa---dinh-cao-cua-cuoc-song-thuong-luu.html">xem</a>
+						</div>
+					</div>
+					<!--Cộng đồng-->
+					<!--LOCATION-->
+					<div class="group-left"  data-name="location-home">
+						<div class="box-cover" style="background-image:url({{ site.url }}/pictures/catalog/background/bg2.jpg)"><img src="pictures/catalog/background/vi-tri-athena-fulland-dai-kim.jpg" alt="VỊ TRÍ TRUNG TÂM"></div>
+						<div class="text-intro">
+							<h2>SỐNG SANG TẠI TỌA ĐỘ VÀNG</h2><div class="box-text">
+								<p>Nằm trong quần thể Khu đô thị mới Đại Kim – một trong những khu đô thị trọng yếu được định hướng phát triển đồng bộ với quy mô lớn nhất tại Hà Nội, Athena Fulland tọa lạc trên mặt đường Nguyễn Xiển.</p>
 							</div>
-							<div class="box-news">
-								<div class="pic">
-									<img src="pictures/catalog/tin-tuc/26-01-2018/h1.jpeg" alt="Bất động sản Đức Hòa hưởng lợi nhờ hạ tầng">
+							<a class="go-page" href="vi/vi-tri/">Xem Chi Tiết<span></span></a>
+						</div>
+					</div>
+					<!--LOCATION-->
+					<!--FACILITIES-->
+					<div class="group-left"   data-name="facilities-home">
+						<div class="box-cover" style="background-image:url({{ site.url }}/pictures/catalog/background/bg4.jpg)"><img src="{{ site.url }}/pictures/catalog/background/tien-ich-dang-cap.jpg" alt="TIỆN ÍCH"></div>
+						<div class="text-intro">
+							<h2>TIỆN ÍCH ĐẲNG CẤP</h2><div class="box-text">
+								<p>Những tiện ích đẳng cấp trong quần thể lần đầu tiên xuất hiện tại Athena Fulland đem đến cuộc sống đỉnh cao cho mọi cư dân.</p>
+							</div>
+							<a class="go-page" href="vi/tien-ich/">Xem Chi Tiết<span></span></a>
+						</div>
+					</div>
+					<!--FACILITIES-->
+					<!--APARTMENT-->
+					<div class="group-left"   data-name="facilities-home">
+						<div class="box-cover" style="background-image:url({{ site.url }}/pictures/catalog/background/bg6.jpg)"><img src="{{ site.url }}/pictures/catalog/background/athena-fulland-phoi-canh-lien-ke.jpg" alt="THIẾT KẾ MẶT BẰNG"></div>
+						<div class="text-intro">
+							<h2>THÔNG TIN THIẾT KẾ MẶT BẰNG</h2><div class="box-text">
+								<p>Lối kiến trúc được giao hòa giữa ý tưởng của Vimefulland và kiến trúc sư người Pháp Francois Barberot, phân khu Larissa và Athens đồng nhất khoác lên mình vẻ bề thế, quyến rũ đặc trưng của lối kiến trúc tân cổ điển nước Pháp.</p>
+							</div>
+							<a class="go-page" href="vi/san-pham/">Xem Thông Tin<span></span></a>
+						</div>
+					</div>
+					<!--APARTMENT-->
+					<!--NEWS-->
+					<div class="group-left"  data-name="news-home">
+						<div class="box-cover"  style="background-image:url({{ site.url }}/pictures/catalog/background/bg8.jpg)"></div>
+						<div class="wrap-news">
+							<div class="box news">
+								<div class="colum-pic"><img src="{{ site.url }}/pictures/news/tong-the-athena-fulland-1000.jpg" alt="CĂN HỘ DUAL-KEY: GIẢI PHÁP TUYỆT VỜI  CHO GIA ĐÌNH 3 THẾ HỆ"></div>
+								<div class="colum-text">
+									<!--h3>CĂN HỘ DUAL-KEY: GIẢI PHÁP TUYỆT VỜI  CHO GIA ĐÌNH 3 THẾ HỆ</h3>
+									<p>Với tổng diện tích căn hộ lên đến 113,9 m2, phong cách thiết kế thông</p><g>[ ... ]</p-->
+									<p>Thông tin về dự án Athena Fulland, cập nhật tiến độ các phân khu Larissa, phân khu Athens, biệt thự, liền kề,...</p>
+									<a class="go-details"  href="{{ site.url }}/vi/tin-tuc/"></a>
 								</div>
-								<h3>Bất động sản Đức Hòa hưởng lợi nhờ hạ tầng</h3>
-								<a class="go-news" href="tin-tuc/tin-du-an/bat-dong-san-duc-hoa-huong-loi-nho-ha-tang.html">xem</a>
+								<h2>Tin Tức Dự án</h2>
+							</div>
+							<div class="box album-home" >
+								<div class="colum-pic">
+									<img src="{{ site.url }}/pictures/canhomau/can-ho-mau-athena-fulland-1.jpg" alt="HÌNH ẢNH CĂN HỘ MẪU  - 113,9M2 (3PN, 2WC)">
+								</div>
+								<a class="view-album" href="{{ site.url }}/vi/thu-vien/hinh-anh/" data-href="{{ site.url }}/vi/thu-vien/hinh-anh/"></a>
+								<h2>Hình Ảnh</h2>
+							</div>
+							<div class="box video-home" >
+								<div class="colum-pic">
+									<img src="{{ site.url }}/pictures/canhomau/can-ho-mau-athena-fulland-3.jpg" alt="CĂN HỘ MẪU Athena Fulland ĐẸP MÊ HỒN">
+								</div>
+								<a class="player" href="{{ site.url }}/vi/thu-vien/video/" data-href="{{ site.url }}/vi/thu-vien/video/"></a>
+								<h2>Video</h2>
 							</div>
 						</div>
 					</div>
 					<!--NEWS-->
+					<!--CONTACT-->
+					<div class="group-left"  data-name="contact-home">
+						<div class="box-cover"></div>
+						<div class="investor mobile">
+							<ul>
+								<li><a class="logo-angia vi" href="http://tapdoanvimefulland.vn" target="_blank"></a></li>
+								<!--li><a class="logo-creed vi" href="javascript:void(0);" target="_blank"></a></li-->
+							</ul>
+						</div>
+						<div class="text-intro">
+							<h2>Đơn Vị Phát Triển Dự Án Vimefulland</h2>
+							<div class="box-text">
+								<p>Tầng 7, Tòa nhà Sông Đà, Phạm Hùng, Nam Từ Liêm, Hà Nội
+									<br>Điện thoại: <a href="tel:0886945555">(+84) 88 694 5555</a>
+									<br>Hotline: <a href="tel:0886945555"><strong>088.694.5555</strong></a>
+									<a href="tel:0886945555"><strong></strong></a>
+									<br>Email: <a href="mailto:vimefulland.batdongsan@gmail.com">vimefulland.batdongsan@gmail.com</a>
+								</p>
+							</div>
+							</div>
+						</div>
+						<!--CONTACT-->
+					</div>
+					<!--LEFT CONTENT-->
+					<!--RIGHT CONTENT-->
+					<div class="box-right">
+						<!--INTRO-->
+						<div class="group-right"  data-name="intro-home">
+							<div class="box-cover-right"></div>
+						</div>
+						<!--INTRO-->
+						<!--BANNER-->
+						<!--div class="group-right"  data-name="news-home">
+							<div class="box-cover-right"></div>
+						</div>
+						<!--BANNER-->
+						<!--Cộng đồng-->
+						<div class="group-right"  data-name="location-home">
+							<div class="box-cover-right" style="background-image:url({{ site.url }}/pictures/catalog/background/athena-fulland-phoi-canh-biet-thu-don-lap.jpg)"></div>
+						</div>
+						<!--Cộng đồng-->
+						<!--LOCATION-->
+						<div class="group-right"  data-name="location-home">
+							<div class="box-cover-right" style="background-image:url({{ site.url }}/pictures/catalog/background/vi-tri-athena-fulland-dai-kim.jpg)"></div>
+						</div>
+						<!--LOCATION-->
+						<!--FACILITIES-->
+						<div class="group-right"  data-name="facilities-home">
+							<div class="box-cover-right" style="background-image:url({{ site.url }}/pictures/catalog/background/tien-ich-dang-cap.jpg)"></div>
+						</div>
+						<!--FACILITIES-->
+						<!--APARTMENT-->
+						<div class="group-right"  data-name="facilities-home">
+							<div class="box-cover-right" style="background-image:url({{ site.url }}/pictures/catalog/background/athena-fulland-phoi-canh-lien-ke.jpg)"></div>
+						</div>
+						<!--APARTMENT-->
+						<!--NEWS-->
+						<div class="group-right"  data-name="news-home">
+							<div class="box-cover-right"></div>
+						</div>
+						<!--NEWS-->
+						<!--CONTACT-->
+						<div class="group-right"  data-name="contact-home">
+							<div class="box-cover-right"></div>
+						</div>
+						<!--CONTACT-->
+					</div>
+					<!--RIGHT CONTENT-->
 				</div>
-				<!--NEWS-->
-				<!--BOTTOM-->
-				<div class="bottom">
-					<!--SUBSCRIBE-->
-					<div class="subscribe-icon">
-						<span class="subscribe"></span>
-						<a class="subscribe-link" href="javascript:void(0);">Đăng ký</a>
-					</div>
-					<!--SUBSCRIBE-->
-					<!--VIDEO-->
-					<div class="video-icon">
-						<a class="play-video" href="javascript:void(0);" data-href="{{ site.url }}/view-video.html?id=17">Video</a>
-						<span class="video"></span>
-					</div>
-					<!--VIDEO-->
-					<!--360 DEGEE-->
-					<div class="degee-icon">
-						<a class="degee-link" href="javascript:void(0);">Ảnh</a>
-						<span class="degee"></span>
-					</div>
-					<!--360 DEGEE-->
-					<!--HOTLINE-->
-					<div class="hotline">
-						<span class="call"></span>
-						<a href="tel:0946990827">0946 990 827</a>
-					</div>
-					<!--HOTLINE-->
-					<!--COPYRIGHT-->
-					<div class="bottom-text">
-						<div class="copyright">© 2018 <strong>Athena Fulland</strong>. ALL RIGHTS RESERVED.
-					<!--COPYRIGHT-->
-				</div>
-				<!--BOTTOM-->
-			</div>
+			</section>
 			<!--CONTAINER-->

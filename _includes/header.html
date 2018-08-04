@@ -1,57 +1,43 @@
-	<!--LOAD-PAGE-->
-	<div class="all-pics"></div>
-	<div class="all-album"></div>
-	<div class="allvideo"></div>
-	<div class="overlay-album"></div>
-	<div class="overlay-video"></div>
-	<div class="overlay-dark"></div>
-	<!--LOAD-PAGE-->
-	<div class="logo desktop">
+	
+	<!--HEADER-->
+	<header class="header">
+		<!--LOGO-->
 		<div class="logo vi"></div>
-		<a class="logo-investor vi" href="#" target="_blank">Tran Anh Group</a><div class="bg-logo"></div>
-	</div>
-	<div class="logo mobile">
-		<a class="logo-investor vi" href="#" target="_blank">Tran Anh Group</a></div><div class="nav-click"></div>
-		<!--TOP-->
-		<div class="top">
-			<!--NAVIGATION-->
-			<div class="navigation">
-				<div class="nav">
-					<ul>
-						<li><a class="link-home" href="{{ site.url }}" data-name="home-page">Trang chủ</a></li>
-						<li class="current"><a class="link-load" href="gioi-thieu.html" data-name="about-page">Giới thiệu</a></li>
-						<li><a class="link-load" href="{{ site.url }}/vi-tri.html" data-name="location-page">Vị trí</a></li>
-						<li><a class="link-load" href="{{ site.url }}/tien-ich.html" data-name="facilities-page">Tiện ích</a></li>
-						<li><a class="link-load" href="{{ site.url }}/san-pham.html" data-name="apartment-page">Sản phẩm</a></li>
-						<li><a class="link-load" href="{{ site.url }}/thu-vien.html" data-name="library-page">Thư viện</a></li>
-						<li><a class="link-load" href="{{ site.url }}/tin-tuc.html" data-name="news-page">Tin tức - Sự kiện</a></li>
-						<li><a class="link-load" href="{{ site.url }}/lien-he.html" data-name="contact-page">Liên hệ</a></li>
-					</ul>
-					<span class="N1 sunlight"><span></span></span>
-					<span class="N2 lighting"><span></span></span>
-					<span class="N3 rotatenew"><span></span></span>
-					<span class=" N4 sunlight"><span></span></span>
-					<span class=" N5 lighting"><span></span></span>
-					<span class=" N6 rotatenew"><span></span></span>
-					<span class=" N7 sunlight"><span></span></span>
-					<span class=" N8 lighting"><span></span></span>
-					<span class=" N9 rotatenew"><span></span></span>
-					<span class=" N10 sunlight"><span></span></span>
-				</div><div class="social">
-				<ul>
-					<li><a class="facebook" href="#" target="_blank"></a></li>
-					<li><a class="youtube" href="#" target="_blank"></a></li>
-					<li><a class="google" href="#" target="_blank"></a></li>
-				</ul>
-			</div><div class="lang">
+		<!--LOGO-->
+		<!--HOTLINE-->
+		<div class="hotline">
+			<span class="call"></span>
+			<a href="tel:0886945555">088 694 5555</a>
+		</div>
+		<!--HOTLINE-->
+		<div class="language">
 			<form id="change_lang" enctype="multipart/form-data" method="post" action="{{ site.url }}/index.php?route=common/home">
 				<ul>
-					<li class="en "><a href="javascript:void(0);" onclick="$('input[name=\'language_code\']').attr('value', 'en').submit();$('#change_lang').submit();return false;">en</a></li>
+					<li class="en "><a href="javascript:void(0);" onClick="$('input[name=\'language_code\']').attr('value', 'en').submit();$('input[name=\'redirect\']').attr('value', 'en/index.html').submit();$('#change_lang').submit();return false;">en</a></li>
 				</ul>
-				<input type="hidden" value="" name="language_code">
-				<input id="changlanguage_redirect" type="hidden" value="{{ site.url }}/gioi-thieu.html" name="redirect">
+				<input type="hidden" value="" name="language_code" />
+				<input id="changlanguage_redirect" type="hidden" value="{{ site.url }}/{{ page.url }}" name="redirect" />
 			</form>
-		</div></div>
+			</div>
+			<div class="nav-click"></div>
 		<!--NAVIGATION-->
-	</div>
-	<!--TOP-->
+		<div class="navigation">
+			<div class="nav">
+				<ul>
+					<li ><a class="link-load" href="{{ site.url }}" data-name="home-page" data-title="Athena Fulland" data-description="Athena Fulland" data-keyword="Athena Fulland">Trang chủ</a></li>
+					<li  ><a class="link-load" href="{{ site.url }}/vi/gioi-thieu/" data-name="about-page" data-title="Athena Fulland" data-description="Athena Fulland" data-keyword="Athena Fulland">Giới thiệu</a></li>
+					<li  ><a class="link-load" href="{{ site.url }}/vi/vi-tri/" data-name="location-page" data-title="Athena Fulland" data-description="Athena Fulland" data-keyword="Athena Fulland">Vị trí</a></li>
+					<li  ><a class="link-load" href="{{ site.url }}/vi/tien-ich/" data-name="facilities-page" data-title="Athena Fulland" data-description="Athena Fulland" data-keyword="Athena Fulland">Tiện ích</a></li>
+					<li  ><a class="link-load" href="{{ site.url }}/vi/san-pham/" data-name="apartment-page" data-title="Athena Fulland" data-description="Athena Fulland" data-keyword="Athena Fulland">Sản phẩm</a></li>
+					<li  ><a class="link-load" href="{{ site.url }}/vi/tien-do/thang-07-2018/" data-name="progress-page" data-title="Athena Fulland" data-description="Athena Fulland" data-keyword="Athena Fulland">Tiến độ</a></li>
+					<li  ><a class="link-load" href="{{ site.url }}/vi/thu-vien/hinh-anh/" data-name="library-page" data-title="Athena Fulland" data-description="Athena Fulland" data-keyword="Athena Fulland">Thư viện</a></li>
+					<li  ><a class="link-load" href="{{ site.url }}/vi/tin-tuc/" data-name="media-page" data-title="Athena Fulland" data-description="Athena Fulland" data-keyword="Athena Fulland">Tin tức</a></li>
+					<li  ><a class="link-load" href="{{ site.url }}/vi/chinh-sach/" data-name="about-page" data-title="Athena Fulland" data-description="Athena Fulland" data-keyword="Athena Fulland">Chính sách</a></li>
+					<li  ><a class="link-load" href="{{ site.url }}/vi/lien-he/" data-name="contact-page" data-title="Athena Fulland" data-description="Athena Fulland" data-keyword="Athena Fulland">Liên hệ</a></li>
+				</ul>
+			</div>
+			<span></span>
+		</div>
+		<!--NAVIGATION-->
+	</header>
+	<!--HEADER-->
