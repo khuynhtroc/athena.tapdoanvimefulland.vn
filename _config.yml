@@ -2,14 +2,14 @@ name: "Athena Fulland"
 title: "Athena Fulland"
 email: khuynhtroc@gmail.com
 description: ""
-url: "https://athena.net.vn" 
-baseurl: "https://athena.net.vn"
-allow_search_engine: false
+url: "http://athena.tapdoanvimefulland.vn" 
+baseurl: "http://athena.tapdoanvimefulland.vn"
+allow_search_engine: true
 # paypal: ""
 google_verify: ""
 bing_verify: 
-google_analytics: ""
-google_tag_manager_id: ""
+google_analytics: "UA-122301114-3"
+google_tag_manager_id: "GTM-5H8M6MX"
 google_plus: 
 subcriber_url: ""
 
@@ -17,7 +17,7 @@ subcriber_url: ""
 markdown: "kramdown"
 highlighter: rouge
 encoding: "UTF-8"
-support_url: "http://athena.net.vn/lien-he/"
+support_url: "http://athena.tapdoanvimefulland.vn/lien-he/"
 # kramdown:
 #   input: GFM
 #   syntax_highlighter: rouge
