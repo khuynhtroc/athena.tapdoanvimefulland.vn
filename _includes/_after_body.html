@@ -13,7 +13,7 @@
 	<!--REGISTER-->
 	<div class="register-form">
 		<a class="close"  href="javascript:void(0);">Đóng</a>
-		<form onsubmit="return validateregister();" action="https://tapdoanvimefulland.us18.list-manage.com/subscribe/post?u=eb2c82ff1a245d4ee5791ddc7&amp;id=fa18c0c417" accept-charset="UTF-8" id="register" name="frm_register" method="post" target="_blank">
+		<form onsubmit="return validateregister();" accept-charset="UTF-8" id="register" name="frm_register" method="post" target="_blank">
 			<input name="utf8" type="hidden" value="&#x2713;">
 			<input id="subscription_customer_source" name="subscription[customer_source]" type="hidden" value="">
 			<div class="require-col">
@@ -51,7 +51,32 @@
 	}
 		$('#btn-register-submit').click(function(){
 		if(validateregister()==true){
-			document.getElementById('register').submit();
+            $("#contact-loader").show();
+            $('body').append('<div class="loadicon" style="display:block"><span class="circle"></span></div>');
+            var datapost = $('#register').serialize();
+            // $("#frm_contact").submit(function () {
+            $.ajax({
+                type: "POST",
+                url: "https://script.google.com/macros/s/AKfycbxFpPvKMtWFOdQ8dBy2J1TkNyj76bGuVjNMRgIkEPNHjonIOIw/exec",
+                data: datapost,
+                success: function (res) {
+                    $("#contact-loader").hide();
+                    $('.loadicon').remove();
+                    $('.contact-success').remove();
+                    if (res.result == 'success') {
+                        document.getElementById('frm_contact').reset();
+                        $('.overlay-dark').after("<div  class='contact-success color-blue'>Thông tin liên hệ của Bạn được gửi hoàn tất ! Cảm ơn Bạn !</div>");
+                    } else {
+                        $('.overlay-dark').after("<div  class='contact-success color-red'>Thông tin liên hệ của bạn không gửi được, vui lòng kiểm tra lại!</div>");
+                    }
+                    $('html, body').animate({scrollTop: 0}, 'slow');
+                    setTimeout(hidemsg, 5000);
+                },
+                error: function (res) {
+                    $('.overlay-dark').after("<div  class='contact-success color-red'>Thông tin liên hệ của bạn không gửi được, vui lòng kiểm tra lại!</div>");
+                }
+            });
+			// document.getElementById('register').submit();
 			$('.register-form .close').trigger('click');
 			return false;
 			}//end if
