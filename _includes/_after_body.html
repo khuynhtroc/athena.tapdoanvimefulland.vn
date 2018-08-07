@@ -13,7 +13,7 @@
 	<!--REGISTER-->
 	<div class="register-form">
 		<a class="close"  href="javascript:void(0);">Đóng</a>
-		<form onsubmit="return validateregister();" accept-charset="UTF-8" id="gform" name="frm_register" method="https://script.google.com/macros/s/AKfycbwy_nVJHL426FO14kivuLNQCoCtgpXTCI1jHRr2c8LwPC_nmHs/exec" target="_blank">
+		<form onsubmit="return validateregister();" accept-charset="UTF-8" id="register" name="frm_register" method="post" target="_blank">
 			<input name="utf8" type="hidden" value="&#x2713;">
 			<input id="subscription_customer_source" name="subscription[customer_source]" type="hidden" value="">
 			<div class="require-col">
@@ -57,7 +57,7 @@
             // $("#frm_contact").submit(function () {
             $.ajax({
                 type: "POST",
-                url: "https://script.google.com/macros/s/AKfycbxFpPvKMtWFOdQ8dBy2J1TkNyj76bGuVjNMRgIkEPNHjonIOIw/exec",
+                url: "https://script.google.com/macros/s/AKfycbwy_nVJHL426FO14kivuLNQCoCtgpXTCI1jHRr2c8LwPC_nmHs/exec",
                 data: datapost,
                 success: function (res) {
                     $("#contact-loader").hide();
