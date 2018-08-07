@@ -2,7 +2,14 @@
 }
 
 @media (max-width: 1100px) {
-    p.tu-them1 {
+    .tu-them1 {
         top:0 !important;
     }
+}
+@media screen and (max-width: 1100px) {
+.title-page {
+    height: auto;
+    top: 10%;
+    text-align: center;
+    z-index: 15;
 }
