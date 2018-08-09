@@ -117,14 +117,17 @@ function VideoFull() {
                 h(!!document.msFullscreenElement)
             }),
             ThisVideo.addEventListener("ended", e, !1),
-            $(".player-vid").on("click", function(e) {
-                e.preventDefault(),
-                $(".center-content").addClass("fadeout"),
-                $(".pic-video").addClass("hide"),
-                (ThisVideo.paused || ThisVideo.ended) && (ThisVideo.play(),
-                $(".controls").addClass("addshow"),
-                $(".player-vid").addClass("hide").removeClass("show"))
+            $(document).ready(function () {
+                $(".player-vid").on("click", function(e) {
+                    e.preventDefault(),
+                        $(".center-content").addClass("fadeout"),
+                        $(".pic-video").addClass("hide"),
+                    (ThisVideo.paused || ThisVideo.ended) && (ThisVideo.play(),
+                        $(".controls").addClass("addshow"),
+                        $(".player-vid").addClass("hide").removeClass("show"))
+                })
             }),
+
             isTouchDevice || null != isMobile.all ? (f("mute"),
             o.setAttribute("data-state", "pause")) : (f("mute"),
             o.setAttribute("data-state", "pause"),
