@@ -58,9 +58,6 @@ sitemap: true
 						Thông tin dự án The Emerald xem chi tiết tại <a href="{{ site.url }}">ĐÂY!</a>
 					</div>
 					
-                    
-                    {% include recent_posts.html %}
-
                 </div>
 
             </div>
@@ -74,32 +71,3 @@ sitemap: true
         <!--NEWS LOAD-->
     </div>
 </section>
-
-
-<style>
-    @media screen and (max-width: 1100px) {
-        .grid-item.show {
-            position: relative !important;
-            float: left;
-            left: 0 !important;
-            width: 100%;
-            margin: 0;
-        }
-
-        .head-text h3 {
-            width: calc(100% - 90px);
-        }
-    }
-
-    .subscribe-icon.r-corner {
-        z-index: 10;
-    }
-</style>
-<script>
-    jQuery('a.link-load').click(function () {
-        window.location.href = this.href;
-    });
-    jQuery('.link-page a').click(function () {
-        window.location.href = this.href;
-    })
-</script>
