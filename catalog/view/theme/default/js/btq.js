@@ -565,6 +565,7 @@ function NewsLoad(e, t) {
     $(a).length && $(a).remove(),
     $(".news-list").addClass("hide"),
     $(".scrollB").getNiceScroll().hide(),
+        $(".loadicon").show(),
     $.ajax({
         url: e,
         cache: !1,
