@@ -569,7 +569,7 @@ function NewsLoad(e, t) {
         url: e,
         cache: !1,
         success: function(e) {
-            $(t).find(".news-content").append(e),
+            $(t).find(".news-content").append($(e).find('.news-content').length ? $(e).find('.news-content').html() : e),
             $(window).width() <= 1100 ? $(".news-text img").addClass("zoom-pic") : $(".news-text img").removeClass("zoom-pic"),
             ZoomPic(),
             $(".news-text a, .news-text p a").on("click", function(e) {
