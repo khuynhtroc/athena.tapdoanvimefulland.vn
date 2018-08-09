@@ -71,3 +71,17 @@ sitemap: true
         <!--NEWS LOAD-->
     </div>
 </section>
+
+<style>
+     .subscribe-icon.r-corner {
+        z-index: 10;
+    }
+</style>
+<script>
+    jQuery('a.link-load').click(function () {
+        window.location.href = this.href;
+    });
+    jQuery('.link-page a').click(function () {
+        window.location.href = this.href;
+    })
+</script> 
