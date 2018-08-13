@@ -117,7 +117,7 @@ function VideoFull() {
                 h(!!document.msFullscreenElement)
             }),
             ThisVideo.addEventListener("ended", e, !1),
-            window.addEventListener("load", function() {
+            // window.addEventListener("load", function() {
                 $(".player-vid").on("click", function(e) {
                     e.preventDefault(),
                         $(".center-content").addClass("fadeout"),
@@ -125,7 +125,7 @@ function VideoFull() {
                     (ThisVideo.paused || ThisVideo.ended) && (ThisVideo.play(),
                         $(".controls").addClass("addshow"),
                         $(".player-vid").addClass("hide").removeClass("show"))
-                })
+                // })
             }),
 
             isTouchDevice || null != isMobile.all ? (f("mute"),
