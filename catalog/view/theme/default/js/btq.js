@@ -117,7 +117,7 @@ function VideoFull() {
                 h(!!document.msFullscreenElement)
             }),
             ThisVideo.addEventListener("ended", e, !1),
-            $(window).on('load',function () {
+            $(document).ready(function () {
                 $(".player-vid").on("click", function(e) {
                     e.preventDefault(),
                         $(".center-content").addClass("fadeout"),
