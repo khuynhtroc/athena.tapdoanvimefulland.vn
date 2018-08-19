@@ -1139,21 +1139,23 @@ function ContentLoad() {
         $(".num").removeClass("hide"))
     }),
     $(".onarea").on("click", function(e) {
-        e.preventDefault();
-        var t = $(this).attr("href")
-          , a = $(this).attr("data-name")
-          , o = $(this).attr("href")
-          , i = $(this).attr("data-title")
-          , l = $(this).attr("data-keyword")
-          , n = $(this).attr("data-description")
-          , s = $(this).attr("data-name");
-        return changeUrl(o, i, n, l, s, i, n),
-        $(".loadicon").length || $("body").append('<div class="loadicon" style="display:block"></div>'),
-        $("html, body").addClass("no-scroll"),
-        $(".load-apartment").stop().fadeIn(300, "linear", function() {
-            ApartmentLoad(t, a)
-        }),
-        !1
+
+        // e.preventDefault();
+        // var t = $(this).attr("href")
+        //   , a = $(this).attr("data-name")
+        //   , o = $(this).attr("href")
+        //   , i = $(this).attr("data-title")
+        //   , l = $(this).attr("data-keyword")
+        //   , n = $(this).attr("data-description")
+        //   , s = $(this).attr("data-name");
+        // return changeUrl(o, i, n, l, s, i, n),
+        // $(".loadicon").length || $("body").append('<div class="loadicon" style="display:block"></div>'),
+        // $("html, body").addClass("no-scroll"),
+        // $(".load-apartment").stop().fadeIn(300, "linear", function() {
+        //     ApartmentLoad(t, a)
+        // }),
+        // !1
+
     }),
     $(".go-link").on("click", function(e) {
         e.preventDefault();
